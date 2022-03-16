@@ -3,7 +3,7 @@ public class Quiz {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		MultipleChoiceQuestion question = new MultipleChoiceQuestion(
+		Question question = new MultipleChoiceQuestion(
 			"Which of these is NOT a programming language?", 
 			"CSS", 
 			"Javascript",
@@ -58,7 +58,22 @@ public class Quiz {
 			);
 		question.check();
 
-		question.showResults();
+		question = new TrueFalseQuestion("Java is a programming language?", "TRUE");
+		question.check();
+
+		question = new TrueFalseQuestion("HTML is a programming language?", "FALSE");
+		question.check();
+
+		question = new TrueFalseQuestion("PYTHON is NOT programming language?", "FALSE");
+		question.check();
+
+		question = new TrueFalseQuestion("CSS is a NOT programming language?", "TRUE");
+		question.check();
+
+		question = new TrueFalseQuestion("RUST is a programming language?", "TRUE");
+		question.check();
+
+		MultipleChoiceQuestion.showResults();
 		
 
 	}
