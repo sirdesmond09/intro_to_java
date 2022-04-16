@@ -1,0 +1,14 @@
+package application;
+
+public class Lunch {
+    static int count;
+    private String flavor = "sweet";
+    Lunch() { count++; }
+    void setFlavor(String s) { flavor = s; }
+    String getFlavor() { return flavor; }
+    static public void main(String[] args) {
+        Lunch pepper = new Lunch();
+        new Lunch();
+        System.out.println(pepper.count);
+    }
+}
